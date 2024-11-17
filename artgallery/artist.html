@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: rgb(14, 13, 13);
+        }
+        header {
+            background-color: #0e0d0d;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(243, 236, 236);
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+        }
+        #about {
+            background-color: #0f0f0f;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            font-weight: bolder;
+            color: #eee6e6;
+        }
+        .gallery-container {
+            display: flex;
+            gap: 10em;
+            width: 1000px;
+        }
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 1em);
+            box-shadow: 0 4px 8px rgba(173, 95, 95, 0.1);
+            margin-bottom: 1em;
+            background-color: rgb(247, 242, 242);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+        }
+        #information {
+            background-color: #f9f9f9;
+            width: auto;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+        form label {
+            display: block;
+            margin-top: 1em;
+            text-shadow: #0e0d0d;
+            font-weight: bold;
+        }
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 1em;
+            margin-top: 1em;
+            background-color: #0f0f0f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #0e0d0d;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Artist Information Form</h1>
+    <div class="topnav">
+        <a class="active"  href="display_products.php">Home </a>
+        <a href="abstract_art.html">Abstract Art</a>
+        <a href="portrait.html">Portrait</a>
+        <a href="insertProduct.html">Insert Product</a>
+      </div>
+    
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Welcome to my portfolio! I am an artist who specializes in Abstract art and Portrait art</p>
+    </section>
+
+    <section id="information">
+        <h2>Information</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="search">Search for an Artist Type:</label>
+            <select id="search" name="search">
+                <option value="abstract">Abstract Artist</option>
+                <option value="portrait">Portrait Artist</option>
+            </select>
+
+            <label for="artistName">Artist Name:</label>
+            <input type="text" id="artistName" name="artistName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="portfolio">Portfolio:</label>
+            <textarea id="portfolio" name="portfolio" required></textarea>
+
+            <label for="genreOfArt">Genre of Art:</label>
+            <textarea id="genreOfArt" name="genreOfArt" required></textarea>
+
+            <label for="exhibitions">Exhibitions:</label>
+            <textarea id="exhibitions" name="exhibitions" required></textarea>
+
+            <label for="awards">Awards:</label>
+            <textarea id="awards" name="awards" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Artist Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
